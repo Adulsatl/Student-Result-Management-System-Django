@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent approval full list</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li><a href="st_home">Home</a></li>
+        <li><a href="">Parents Approvals</a></li>
+        <li><a href="#"  class="active">Verify</a></li>
+    </ul>
+    <div class="Approvals">
+        <table class="table1" border="1">
+            <tr>
+                <th colspan="5">Student Details</th>
+               </tr> 
+
+       <tr>
+       
+        <th> Name of student </th>
+      <th>College Name</th>
+        <th> DEPARTMENT</th>
+        <th>Sem</th>
+        <th>rollno</th>
+        
+        
+       </tr>
+       <tr>
+        
+        <td> {{key.std_user.STUDENTS_NAME}}</td>
+        <td> {{key.std_user.st_user.user.username}}</td>
+        <td> {{key.std_user.STUDENTS_DEPARTMENT}}</td>
+        <td>{{key.std_user.STUDENTS_SEM}}</td>
+        <td>{{key.std_user.STUDENTS_ROLL}}</td>
+       
+     
+       </tr> 
+       <tr>
+        <th colspan="5">Parent Details</th>
+       </tr>  
+       <tr>
+        
+            <th>Name of parent</th>
+            <th>Relation of student </th>
+            <th>Condact number </th>
+            <th>Email</th>
+            <th>options</th>
+       </tr>
+       
+       <tr>
+        <td> {{key.PARENT_NAME}}</td>
+        <td>{{key.PARENT_RELATION}}</td>
+        <td>{{key.PARENT_PHONE}}</td>
+        <td>{{key.user.email}}</td>
+        <td>
+            <a href="{% url 'tr_pt_accept' key.id %}">Accepect</a>
+    <a href="{% url 'tr_pt_reject' key.id %}">Reject</a>
+        </td>
+       </tr>
+  
+</table>
+
+</div>
+      
+</body>
+</html>

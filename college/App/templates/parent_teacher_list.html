@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers Lists</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="pt_home">Home</a>
+        </li>
+        <li>
+            <a href="#" class="active">Teachers list</a>
+        </li>
+    </ul>
+    <div class="Approvals">
+        <h1>TEACHERS LIST</h1>
+        <table border="1" class="table1">
+            <tr>
+                <th>Teacher Name</th>
+                <th>Subject Name</th>
+                <th>Phone no</th>
+                <th>email</th>
+                
+            </tr>
+            {% for i in key %}
+            <tr>
+                
+                <th>{{i.TEACHER_NAME}} </th>
+                <td>{{i.TEACHER_SUBJECT}}</td>
+                <td>{{i.TEACHER_PHONE}}</td>
+                <td>{{i.user.email}}</td>
+            </tr>
+            {% endfor %}
+   
+    
+    
+    {{i.tr_user.user.username}}
+    <br>
+   
+</table>
+    </div>
+    
+</body>
+</html>

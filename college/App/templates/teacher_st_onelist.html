@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher approval full list</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li><a href="st_home">Home</a></li>
+        <li><a href="">Students Approvals</a></li>
+        <li><a href="#"  class="active">Verify</a></li>
+    </ul>
+    <div class="Approvals">
+        <table class="table1">
+       <tr>
+        
+        <th> username</th>
+        <th> Name </th>
+        <th>college Name </th>
+        <th> DEPARTMENT</th>
+        <th>roll no</th>
+        
+       </tr>
+       <tr>
+        
+        <td> {{key.user.username}}</td>
+        <td> {{key.STUDENTS_NAME}}</td>
+        <td>{{key.st_user.user.username}}</td>
+        <td> {{key.STUDENTS_DEPARTMENT}}</td>
+        <td>{{key.STUDENTS_ROLL}}</td>
+        
+        <td>
+            <a href="{% url 'tr_st_accept' key.id %}">Accepect</a>
+    <a href="{% url 'tr_st_reject' key.id %}">Reject</a>
+        </td>
+       </tr>
+      
+        
+       
+           
+  
+    
+ 
+   
+   
+    
+</table>
+</div>
+      
+</body>
+</html>

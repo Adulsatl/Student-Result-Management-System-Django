@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student Registration</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<style>
+    /* body{overflow: hidden;} */
+</style>
+<body>
+    <div class="box_reg">
+        <h1>STUDENT REGISTRATION</h1>
+        <h4>{{key}}</h4>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            <div class="flex-container">
+                <div class="child">
+            name <input type="text" name="st_name"required>
+           
+            user name <input type="text"  name="st_user"required>
+            Email <input type="email" name="st_email"required>
+            phone number <input type="tel" name="st_ph"required>
+            Age <input type="age" name="st_age" >
+           
+           
+        </div>
+                <div class="child">
+                    semister <input type="text" name="st_sem"required>
+                    roll number <input type="text" name="st_rollno"required>
+                    Gender <input type="radio" name="gender" value="male"required>Male <input type="radio" name="gender" value="female"required>female
+            
+            Address <textarea  cols="30" rows="2" name="st_address"required></textarea>
+            qulification <input type="file" name="st_qulifi"required>
+           
+        </div><div class="child">
+            upload your photo  <input type="file" name="yr" required>
+            College Name <input type="text" name="clg_name"required>
+            department <input type="text" name="st_dep"required>
+          
+            password <input type="password" id=""name="password"required>
+            confirm Passsword <input type="password" name="conpass"required>
+        </div>
+    </div>  
+            <input type="submit" name="" id="">
+                        
+        </form>
+        <a href="st_log">login</a>
+    </div>
+</body>
+</html>

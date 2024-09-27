@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent profile updation</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<style>
+    body{overflow: hidden;}
+</style>
+<body>
+<ul>
+    <li><a href="pt_home">Home</a></li>
+    <li><a href="pt_profile" >Profile</a></li>
+    <li><a href="#"class="active">Update profile</a></li>
+</ul>
+   
+    <div class="box_reg">
+        <h1>PARENT PROFILE UPDATE</h1>
+        <!-- <h4>{{key}}</h4> -->
+        <form action="" method="post">
+            {% csrf_token%}
+            <div class="flex-container">
+                <div class="child">
+                    user name <input type="text" name="pt_usname" disabled value="{{key.user.username}}"required>
+                     name <input type="text" name="pt_name" value="{{key.PARENT_NAME}}"required>
+                </div>
+                <div class="child">
+                    Email <input type="email" name="pt_emails" value="{{key.user.email}}"required>
+                    phone number <input type="tel" name="pt_phs" value="{{key.PARENT_PHONE}}"required>
+                              
+               </div>
+              
+            </div>
+
+                <input type="submit" name="" id="">
+
+        </form>
+       
+    </div>
+</body>
+
+</html>

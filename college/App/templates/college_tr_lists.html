@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College teacher approval list</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="clg_home">Home</a>
+        </li>
+        <li>
+            <a href="#" class="active">Teacher Approvals</a>
+        </li>
+    </ul>
+    <div class="Approvals">
+        <h1>TEACHERS LIST</h1>
+        {% if key %}
+        <table border="2" class="table1">
+            <tr>
+                
+                <th>name</th>
+                <th>DEPARTMENT</th>
+                <th>SUBJECT</th>
+                <th>verify</th>
+            </tr>
+            
+                {% for i in key %}
+                <tr>
+               
+
+                <td>{{i.TEACHER_NAME}}</td>
+                <td> {{i.TEACHER_DEPARTMENT}}</td>
+
+                <td> {{i.TEACHER_SUBJECT}}</td>
+                <td> <a href="{% url 'clg_tr_onelist' i.id %}">check</a></td>
+            </tr>
+
+                {% endfor %}
+           
+        </table>
+        {% else %}
+    
+        <h1 style="color: red;">No Teachers Approval.</h1>
+    {% endif %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Profile</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li><a href="pt_home">Home</a></li>
+        <li><a href="#" class="active"> Child Profile</a></li>
+        
+    </ul>
+    <div class="Approvals">
+    <div class="box">
+        <h1>child Profile</h1>
+        <table class="table1">
+            
+            <tr>
+                <th>Name</th>
+                <td>{{key.STUDENTS_NAME}}</td>
+                <th>gender</th>
+                <td>{{key.STUDENTS_GENDER}}</td>
+            </tr>
+            <tr>
+                <th>Roll No</th>
+                <td>{{key.STUDENTS_ROLL}}</td>
+                <th>phone</th>
+                <td>{{key.STUDENTS_PHONE}}</td>
+            </tr>
+            <tr>
+                <th>SEMISTER</th>
+                <td>{{key.STUDENTS_SEM}}</td>
+                
+                <th>department</th>
+                <td>{{key.STUDENTS_DEPARTMENT}}</td>
+            </tr>
+           
+           <tr>
+            <th>College Name</th>
+            <td>{{key.st_user.user.username}}</td>
+            <th>Qualification</th>
+            <td><a href="{{key.STUDENTS_QULIFICATION.url}}" target="_blank">view</a></td>
+           </tr>
+           <tr>
+            <th>email</th>
+            <td>{{key.user.email}}</td>
+            <th>Address</th>
+            <td>{{key.STUDENTS_ADDRESS}}</td>
+            </tr>
+        </tr>
+        </table>
+        
+        
+        
+         
+        
+       
+
+
+    </div>
+</div>
+</body>
+</html>

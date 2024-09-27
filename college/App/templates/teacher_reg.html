@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registration</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <div class="box_reg">
+        <h1>TEACHER REGISTRATION</h1>
+        <h4>{{key}}</h4>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            <div class="flex-container">
+                <div class="child">
+            name <input type="text" name="tr_name"required>
+            user name <input type="text"  name="tr_user"required>
+            Email <input type="email" name="tr_email"required>
+            phone number <input type="tel" name="tr_ph"required>
+            Age <input type="age" name="tr_age" required>
+                </div>
+                <div class="child">
+            Address <textarea  cols="30" rows="10" name="tr_address"required></textarea>
+            
+            Gender <input type="radio" name="gender" value="male">Male <input type="radio" name="gender" value="female"required>female
+            qulification(*pdf only) <input type="file" name="tr_qulifi"required>
+                </div>
+                <div class="child">
+            department <input type="text" name="tr_dep"required>
+            subject <input type="text" name="sub" required>
+            College Name <input type="text" name="clg_name"required>
+            password <input type="password" id=""name="password"required>
+            confirm Passsword <input type="password" name="conpass"required>
+                </div>
+            </div>
+            <input type="submit" name="" id="">
+
+        </form>
+        <a href="tr_log">login</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Mark Update</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="tr_home">Home</a></li>
+        <li><a href="tr_view_students">Student View</a></li>
+        <li><a href="#" onclick="history.back()">Student Mark</a></li>
+        <li><a href="#" class="active">Update Mark</a></li>
+    </ul>
+<div class="box_reg">
+    
+    <h4>Update Mark of {{key.st.STUDENTS_NAME}}</h4>
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        {{key.sub.SUB1}} <input type="text"  value="{{key.TR_MAR1}}" name="subj1" id="" required>
+        <br>
+         {{key.sub.SUB2}} <input type="text" value="{{key.TR_MAR2}}" name="subj2" id="" required>
+         <br> {{key.sub.SUB3}} <input type="text" value="{{key.TR_MAR3}}" name="subj3" id="" required>
+         <br> {{key.sub.SUB4}}  <input type="text" value="{{key.TR_MAR4}}" name="subj4" id="" required>
+         <br>{{key.sub.SUB5}}  <input type="text" value="{{key.TR_MAR5}}" name="subj5" id="" required>
+         <br>
+         <input type="submit" name="" id="">
+
+        
+    </form>
+    </div>

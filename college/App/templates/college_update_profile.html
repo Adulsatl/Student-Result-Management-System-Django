@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Registration</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<style>
+    body{overflow: hidden;}
+</style>
+<body>
+<ul>
+    <li><a href="clg_home">Home</a></li>
+    <li><a href="clg_profile" >Profile</a></li>
+    <li><a href="#"class="active">Update profile</a></li>
+</ul>
+   
+    <div class="box_reg">
+        <h1>COLLEGE PROFILE UPDATE</h1>
+        <!-- <h4>{{key}}</h4> -->
+        <form action="" method="post">
+            {% csrf_token%}
+            <div class="flex-container">
+                <div class="child">
+                    College name <input type="text" name="clg_names" disabled value="{{key.user.username}}"required>
+                    Head Master name <input type="text" name="clg_hms" value="{{key.HEAD_NAME}}"required>
+                </div>
+                <div class="child">
+                    Email <input type="email" name="clg_emails" value="{{key.user.email}}"required>
+                    phone number <input type="tel" name="clg_phs" value="{{key.PHONE}}"required>
+                              
+               </div>
+              
+            </div>
+
+                <input type="submit" name="" id="">
+
+        </form>
+       
+    </div>
+</body>
+
+</html>

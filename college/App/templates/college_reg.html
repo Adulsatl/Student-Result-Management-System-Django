@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Registration</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<style>
+    body{overflow: hidden;}
+</style>
+<body>
+
+   
+    <div class="box_reg">
+        <h1>COLLEGE REGISTRATION</h1>
+        <h4>{{key}}</h4>
+        <form action="" method="post">
+            {% csrf_token%}
+            <div class="flex-container">
+                <div class="child">
+                    College name <input type="text" name="clg_name"required>
+                    Head Master name <input type="text" name="clg_hm"required>
+                    Email <input type="email" name="clg_email">
+                    phone number <input type="tel" name="clg_ph"required>
+                    Course base <input type="text" name="base"required>
+                </div>
+                <div class="child">
+                    Address <textarea cols="25" rows="11" name="address"required></textarea>
+                   
+                    password <input type="password" id="" name="password"required>
+                    confirm Passsword <input type="password" name="conpass"required>
+                </div>
+            </div>
+
+                <input type="submit" name="" id="">
+
+        </form>
+        <a href="clg_log">login</a>
+    </div>
+</body>
+
+</html>

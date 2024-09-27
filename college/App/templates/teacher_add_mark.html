@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add mark</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="tr_home">Home</a>
+        </li>
+        <li>
+            <a href="tr_view_students">Students view </a>
+        </li>
+        <li>
+            <a href="#" class="active">Internal mark</a>
+        </li>
+    </ul>
+    <div class="box_reg">
+    <h4>Name of the student {{st.STUDENTS_NAME}}</h4>
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        {{sub.SUB1}} <input type="text"placeholder="Out of 20"  name="sub1" id="" required>
+        <br>
+         {{sub.SUB2}} <input type="text" placeholder="Out of 20" name="sub2" id="" required>
+         <br> {{sub.SUB3}} <input type="text" placeholder="Out of 20" name="sub3" id="" required>
+         <br> {{sub.SUB4}}  <input type="text" placeholder="Out of 20" name="sub4" id="" required>
+         <br>{{sub.SUB5}}  <input type="text" placeholder="Out of 20" name="sub5" id="" required>
+         <br>
+         <input type="submit" name="" id="">
+
+        
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li><a href="tr_home">Home</a></li>
+        <li><a href="#" class="active">Profile</a></li>
+        <li><a href="tr_update_profile">Change Profile</a></li>
+    </ul>
+
+    <div class="Approvals">
+        <div class="box">
+            <h1>Teacher Profile</h1>
+            <table class="table1">
+                <tr>
+                    <th>USERNAME</th>
+                    <th>college name</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Age</th>
+                    <th>Gender</th>                    
+                    <th>DEPARTMENT</th>
+                    <th>subject</th>
+                    
+
+    
+                </tr>
+                <tr>
+                    <td>{{key.user.username}}</td>
+                    <td>{{key.tr_user.user.username}}</td>
+                    <td>{{key.TEACHER_NAME}}</td>
+                    <td> {{key.TEACHER_PHONE}}</td>
+                    <td>{{key.TEACHER_ADDRESS}}</td>
+                    <td>{{key.TEACHER_AGE}}</td>
+                    <td> {{key.TEACHER_GENDER}}</td>
+                    
+                    <td>{{key.TEACHER_DEPARTMENT}}</td>
+                    <td>{{key.TEACHER_SUBJECT}}</td>
+
+
+                </tr>
+            </table>
+            
+            
+            
+             
+            
+           
+    
+    
+        </div>
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="pt_home">Home</a></li>
+        <li><a href="#" class="active">Mark</a></li>
+    </ul>
+
+    
+    {% if key1 %}
+    <h1> Mark list</h1>
+    <table class="table1" border="1">
+
+        {% for i in key1 %}
+        <tr>
+            <th rowspan="2">
+                <h1>Internal mark</h1>
+            <th>{{i.sub.SUB1}}</th>
+            <th>{{i.sub.SUB2}}</th>
+            <th>{{i.sub.SUB3}}</th>
+            <th>{{i.sub.SUB4}}</th>
+            <th>{{i.sub.SUB5}}</th>
+            <th>Total</th>
+            <th>pass/fail</th>
+        </tr>
+        <tr>
+
+            <th>{{i.TR_MAR1}}</th>
+            <th> {{i.TR_MAR2}}</th>
+            <th> {{i.TR_MAR3}}</th>
+            <th>{{i.TR_MAR4}}</th>
+            <th>{{i.TR_MAR5}}</th>
+
+
+            <th> {% with sum1=i.TR_MAR1|add:i.TR_MAR2|add:i.TR_MAR3|add:i.TR_MAR4|add:i.TR_MAR5 %}
+                {{ sum1 }}
+                {% endwith %}
+            </th>
+            <td>
+                {% with CGPA=i.TR_MAR1|add:i.TR_MAR2|add:i.TR_MAR3|add:i.TR_MAR4|add:i.TR_MAR5|add:i.ad_mar.AD_MAR1|add:i.ad_mar.AD_MAR2|add:i.ad_mar.AD_MAR3|add:i.ad_mar.AD_MAR4|add:i.ad_mar.AD_MAR5 %}
+                
+                {% if CGPA >= 500 %}
+                 First Class with Distinction
+                {% elif CGPA >= 375 %}
+                 First Class
+                {% elif CGPA >= 250 %}
+                Second Class
+                {% elif CGPA >= 125 %}
+                Third Class
+                {% else %}
+                 Fail
+                {% endif %}
+                {% endwith %}
+
+            </td>
+            
+        </tr>
+
+        <tr>
+            <th rowspan="2">
+                <h1>EXternal mark</h1>
+            <th>{{i.sub.SUB1}}</th>
+            <th>{{i.sub.SUB2}}</th>
+            <th>{{i.sub.SUB3}}</th>
+            <th>{{i.sub.SUB4}}</th>
+            <th>{{i.sub.SUB5}}</th>
+            <th>Total</th>
+            <th>CGPA</th>
+        </tr>
+        <tr>
+            <td>{{i.ad_mar.AD_MAR1}}</td>
+            <td>{{i.ad_mar.AD_MAR2}}</td>
+            <td>{{i.ad_mar.AD_MAR3}}</td>
+            <td>{{i.ad_mar.AD_MAR4}}</td>
+            <td>{{i.ad_mar.AD_MAR5}}</td>
+            <th>{% with sum=i.ad_mar.AD_MAR1|add:i.ad_mar.AD_MAR2|add:i.ad_mar.AD_MAR3|add:i.ad_mar.AD_MAR4|add:i.ad_mar.AD_MAR5 %}
+                {{ sum }}
+                {% endwith %}</th>
+            
+            <th>{{cg}}</th>    
+                
+            
+
+          
+              
+        </tr>
+        {% endfor %}
+        {{cgpa}}
+    </table>
+    {% else %}
+
+    <h1 style="color: red;">No marks are publish .</h1>
+    {% endif %}
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+ /* navigation bar */
+body{
+    margin:0;
+    padding: 0;
+    height:100vh;
+    width: 100%;
+    /* background-image: linear-gradient(rgb(79, 202, 243) ,rgb(245, 199, 112)); */
+    background: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* overflow: hidden; */
+    
+/* responsive navbar */
+@media (min-width: 768px) {
+  ul {
+      text-align: right;
+  }
+
+  li a {
+      display: inline-block;
+  }
+}
+    
+
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active{
+    background-color:rgb(245, 199, 112);
+   
+}
+/* navigation bar */
+
+/* logins */
+
+.box_log{
+    text-transform: uppercase;
+    background: rgba(1,1, 1, 0.1);
+    margin-top:8%;
+    margin-left:35%;
+    font-size: large;
+    /* text-align: center; */
+    padding:2%;
+    height:60%;
+    width: 30%;
+    border:1px solid black;
+    box-shadow: 2px 2px 4px black;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+  }
+  h1{
+    text-align: center;
+    text-transform: uppercase;
+  }
+  input[type=submit] {
+    background-color: rgb(79, 202, 243) ;
+    color: black;
+    font-size: large;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+  } 
+  input[type=submit]:hover {
+    opacity: 0.8;
+  } 
+
+  /* logins */
+  /* registration */
+  .box_reg{
+    text-transform: uppercase;
+    width:60%;
+    position: absolute;
+    margin-left:20% ;
+    border: 1px solid black;
+    padding:1%;
+    margin-top:3%;
+    border:1px solid black;
+    box-shadow: 2px 2px 4px black;
+    background: rgba(1,1, 1, 0.1);
+    
+    
+  }
+  .box_reg input[type=email], input[type=tel],input[type=file],input[type=age],textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    
+      }
+    .flex-container {
+        display: flex;
+    }
+    .child
+    {
+        font-size: large    ;
+        width: 50%;
+        margin: 10px;
+        padding:20px, 18px ;
+        
+    }
+  
+
+  /* registration */
+
+  /* Tables of  lists*/
+
+  .Approvals{
+    margin-top:10% ;
+    text-transform: uppercase;
+   
+   
+  }
+
+  .table1{
+   
+    border-collapse: collapse;
+    border: 1px solid rgb(0, 0, 0);
+    text-transform: uppercase;
+    margin-left:10%;
+    min-height:150px;
+    text-align: center;
+    padding:2;
+    width: 80%;
+    font-size: large;
+   
+}
+.button1{
+    background: red;
+    color: white;
+    text-decoration: none;
+}
+.button2{
+    background: green;
+    color: white;
+    text-decoration: none;
+}
+  /* Tables of  lists*/
+  h2{
+    margin-left: 20%;
+  }
+
+  /* alert */
+
+  h4{
+    color: red;
+  }
+
+
+
+
+
+
+
+
+  
+  

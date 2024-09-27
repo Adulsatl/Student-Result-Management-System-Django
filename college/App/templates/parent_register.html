@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Registration</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<style>
+    body{overflow: hidden;}
+</style>
+<body>
+
+   
+    <div class="box_reg">
+        <h1>PARENT REGISTRATION</h1>
+        <h4>{{key}}</h4>
+        <form action="" method="post">
+            {% csrf_token%}
+            <div class="flex-container">
+                <div class="child">
+                    Name <input type="text" name="pt_name"required>
+                    user name <input type="text" name="pt_usname"required>
+                    Email <input type="email" name="pt_email">
+                    phone number <input type="tel" name="pt_ph"required>
+                </div>
+                <div class="child">
+                    relation of student<input type="text" name="pt_std"required>
+                    Student's user name<input type="text" name="pt_stdusername"required>
+                    password <input type="password" id="" name="password"required>
+                    confirm Passsword <input type="password" name="conpass"required>
+                </div>
+            </div>
+
+                <input type="submit" name="" id="">
+
+        </form>
+        <a href="pt_log">login</a>
+    </div>
+</body>
+
+</html>

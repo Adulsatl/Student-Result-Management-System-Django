@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li><a href="st_home">Home</a></li>
+        <li><a href="#" class="active">Profile</a></li>
+        <li><a href="st_update_profile#">Change Profile</a></li>
+    </ul>
+
+    <div class="Approvals">
+        <div class="box">
+            <h1>Student Profile</h1>
+            
+            <table class="table1" border="1">
+                
+                
+                <tr>
+                    <th rowspan="4"><img src="{{key.PIC.url}}" alt="{{key.PIC}}" height="100px" width="100px" style="border-radius: 50px; margin-left: 10%;"></th>
+                    <th>Name</th>
+                    <td>{{key.STUDENTS_NAME}}</td>
+                    <th>USERNAME</th>
+                    <td>{{key.user.username}}</td>
+                </tr> 
+                <tr>
+                    
+                    <th>college name</th>
+                    <td>{{key.st_user.user.username}}</td>
+                    <th>Address</th>
+                    <td>{{key.STUDENTS_ADDRESS}}</td>
+                </tr>  
+                <tr>
+                    
+                    <th>Phone</th>
+                    <td> {{key.STUDENTS_PHONE}}</td>
+                    <th>Age</th>
+                    <td>{{key.STUDENTS_AGE}}</td>
+                </tr> 
+                <tr>
+                   
+                    <th>Gender</th>
+                    <td> {{key.STUDENTS_GENDER}}</td>
+                    <th>department</th>
+                    <td>{{key.STUDENTS_DEPARTMENT}}</td>
+                </tr>
+                   
+                   
+                   
+                    
+                    
+                    
+
+    
+                
+            </table>
+            
+            
+            
+             
+            
+           
+    
+    
+        </div>
+    </div>
+    </body>
+    </html>

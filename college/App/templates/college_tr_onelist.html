@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher approval full list</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="clg_home">Home</a></li>
+        <li><a href="#" onclick="history.back()">Students Approvals</a></li>
+        <li><a href="#"  class="active">Verify</a></li>
+    </ul>
+    <div class="Approvals">
+        
+        <table border="1" class="table1" style="text-align: left;">
+            <tr>
+                <th>username</th>
+                <td>{{key.user.username}}</td>        
+                
+            </tr>
+            <tr>
+                <th>name</th>
+                <td>{{key.TEACHER_NAME}}</td>
+            </tr>
+            <tr>
+                <th>phone</th>
+                <td>{{key.TEACHER_PHONE}}</td>
+            </tr>
+            <tr>
+                <th>adress</th>
+                <td> {{key.TEACHER_ADDRESS}}</td>
+
+            </tr>
+            <tr>
+                <th>age</th>
+                <td> {{key.TEACHER_AGE}}</td>
+            </tr>
+            <tr>
+                <th>DEPARTMENT</th>
+                <td> {{key.TEACHER_DEPARTMENT}}</td>
+            </tr>
+            <tr>
+                <th>SUBJECT</th>
+                <td> {{key.TEACHER_SUBJECT}}</td>
+            </tr>
+            <tr>
+                <th>qulification</th>
+                <td> {{key.TEACHER_QULIFICATION}}</td>
+            </tr>
+
+            <tr>
+                <th>verify</th>
+                  <td> <button class="button2"> <a href="{% url 'clg_tr_accept' key.id %}">Accepect</a></button><button class="button1"> <a
+                        href="{% url 'clg_tr_reject' key.id %}">Reject</a></button></td>
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+
+</html>

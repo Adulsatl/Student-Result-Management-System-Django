@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student Registration</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<style>
+    /* body{overflow: hidden;} */
+</style>
+<body>
+    <ul>
+        <li><a href="st_home">Home</a></li>
+        <li><a href="st_profile">Profile</a></li>
+        <li><a href="#" class="active">Update Profile</a></li>
+    </ul>
+    <div class="box_reg">
+        <h1>STUDENT PROFILE UPDATION</h1>
+        
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            <div class="flex-container">
+                <div class="child">
+            name <input type="text" name="st_names"value="{{key.STUDENTS_NAME}}"disabled>
+           
+            Email <input type="email" name="st_emails" value="{{key.user.email}}"required>
+            phone number <input type="tel" name="st_phs" value="{{key.STUDENTS_PHONE}}"required>
+            Age <input type="age" name="st_ages" value="{{key.STUDENTS_AGE}}" required>
+           
+           
+        </div>
+                <div class="child">
+               
+            Address <textarea  cols="30" rows="10" name="st_addresss"required>{{key.STUDENTS_ADDRESS}}</textarea>
+            semister <input type="text" name="st_sems" value="{{key.STUDENTS_SEM}}"required>
+             
+
+           
+       
+           
+          
+        </div>
+    </div>  
+            <input type="submit" name="" id="">
+                        
+        </form>
+        
+    </div>
+</body>
+</html>

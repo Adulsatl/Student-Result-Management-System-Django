@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registration</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li><a href="tr_home">Home</a></li>
+        <li><a href="tr_profile">Profile</a></li>
+        <li><a href="#" class="active">Update Profile</a></li>
+    </ul>
+    <div class="box_reg">
+        <h1>TEACHER PROFILE UPDATE    </h1>
+        
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            <div class="flex-container">
+                <div class="child">
+            name <input type="text" name="tr_name" value="{{key.TEACHER_NAME}}" required>
+           
+            Email <input type="email" name="tr_emailS"value="{{key.user.email}}" required>
+            phone number <input type="tel" name="tr_phS"value="{{key.TEACHER_PHONE}}" required>
+            Age <input type="age" name="tr_ageS" value="{{key.TEACHER_AGE}}" required >
+                </div>
+                <div class="child">
+            Address <textarea  cols="30" rows="15" name="tr_addressS"  required>{{key.TEACHER_ADDRESS}}</textarea>
+            
+            
+            
+                </div>
+                <div class="child">
+                    qulification <input type="file" name="tr_qulifieS" required>
+            department <input type="text" name="tr_deps" value="{{key.TEACHER_DEPARTMENT}}" required>
+            subject <input type="text" name="subs"value={{key.TEACHER_SUBJECT}} required>
+            College Name <input type="text" name="clg_name" value="{{key.tr_user.user.username}}" required>
+           
+                </div>
+            </div>
+            <input type="submit" name="" id="">
+
+        </form>
+        
+    </div>
+</body>
+</html>

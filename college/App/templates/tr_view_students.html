@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mark list</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li><a href="tr_home">Home</a></li>
+        <li><a href="#" class="active">Students view</a></li>
+    </ul>
+    <div class="Approvals">
+        <h1>Students View</h1>
+    <table class="table1">
+        <tr>
+            <th>STUDENT NAME</th>
+            <th>STUDENT ROLL </th>            
+            <th>SEM</th>
+            <th>ADD INTERNAL MARK</th>
+        </tr>
+
+        {% for i in Studs %}
+        <tr>
+            
+        <td>{{i.STUDENTS_NAME}}</td>
+        <td>{{i.STUDENTS_ROLL}}</td>
+
+        <td>{{i.STUDENTS_SEM}}</td>
+        <td><a href="{% url 'tr_add_mark' i.id %}">Add mark</a>
+        <a href="{% url 'tr_view_mark' i.id %}">view mark</a></td>
+    </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Login</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+<body>
+    <ul>
+        <li style="float:right"> <a href="/">BACK</a></li>
+    </ul>
+    <div class="box_log">
+        <h1>College Login</h1>
+        <h5>{{key}}</h5>
+        <form action=""method="post">
+            {% csrf_token %}
+            college name <input type="text" name="clg_name" id=""required>
+            <br>
+            Password <input type="password" name="pass" id=""required>
+            <br>
+            <input type="submit">
+        </form>
+        <a href="clg_reg">sign in</a>
+    </div>    
+</body>
+</html>

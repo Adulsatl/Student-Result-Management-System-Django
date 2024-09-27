@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Mark View</title>
+    <link rel="stylesheet" href="/static/css/total.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="tr_home">Home</a></li>
+        <li><a href="tr_view_students">Student View</a></li>
+        <li><a href="#" class="active">Student Mark</a></li>
+    </ul>
+    {% if key %}
+    <div class="Approvals">
+        {{key1}}
+        <h1>{{key.st.STUDENTS_NAME}}'s mark View</h1>
+        <table class="table1">
+            <tr>
+                <th>{{key.sub.SUB1}}</th>
+                <th>{{key.sub.SUB2}}</th>
+                <th>{{key.sub.SUB3}}</th>
+                <th>{{key.sub.SUB4}}</th>
+                <th>{{key.sub.SUB5}}</th>
+                <th>Edit Mark</th>
+
+
+            </tr>
+            <tr>
+                
+                <td>{{key.TR_MAR1}}</td>
+                <td>{{key.TR_MAR2}}</td>
+                <td>{{key.TR_MAR3}}</td>
+                <td>{{key.TR_MAR4}}</td>
+                <td>{{key.TR_MAR5}}</td>
+                <td><a href="{% url 'tr_mark_update' key.id %}">Update Mark</a></td>
+            </tr>
+        </table>
+    </div> 
+
+
+        {% else %}
+
+        <h1 style="color: red;">Mark is not Added </h1>
+        {% endif %}
+</body>
+
+</html>
